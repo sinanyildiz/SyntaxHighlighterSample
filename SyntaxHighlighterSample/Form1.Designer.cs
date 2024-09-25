@@ -28,13 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.textEditorControl1 = new ICSharpCode.TextEditor.TextEditorControl();
+            this.SuspendLayout();
+            // 
+            // textEditorControl1
+            // 
+            this.textEditorControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textEditorControl1.IsReadOnly = false;
+            this.textEditorControl1.Location = new System.Drawing.Point(0, 0);
+            this.textEditorControl1.Name = "textEditorControl1";
+            this.textEditorControl1.ShowVRuler = false;
+            this.textEditorControl1.Size = new System.Drawing.Size(800, 450);
+            this.textEditorControl1.TabIndex = 0;
+            this.textEditorControl1.Text = "textEditorControl1";
+            this.textEditorControl1.VRulerRow = 100;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textEditorControl1);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Shown += new System.EventHandler(this.Form1_Shown);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private ICSharpCode.TextEditor.TextEditorControl textEditorControl1;
     }
 }
 
